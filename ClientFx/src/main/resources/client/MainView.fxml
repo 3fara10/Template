@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="399.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="399.0" prefWidth="489.0">
+         <bottom>
+            <ButtonBar prefHeight="44.0" prefWidth="351.0" BorderPane.alignment="CENTER">
+              <buttons>
+                  <Text fx:id="errorText" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button mnemonicParsing="false" onAction="#logout" prefHeight="2.0" prefWidth="60.0" text="Logout" />
+                  <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+              </buttons>
+            </ButtonBar>
+         </bottom>
+         <top>
+            <TabPane fx:id="tabPaneScenes" prefHeight="355.0" prefWidth="419.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Tab1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView layoutX="268.0" layoutY="112.0" prefHeight="200.0" prefWidth="218.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.33330535888672" text="Player" />
+                                  <TableColumn prefWidth="75.3333740234375" text="Score" />
+                                    <TableColumn prefWidth="75.3333740234375" text="Time" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

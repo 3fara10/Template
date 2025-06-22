@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':Models')
+    implementation project (':Services')
+    implementation project (':Networking')
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+application{
+    mainClass='client.StartRpcClientFx'
+}
+javafx {
+    version = "21"
+    modules = ['javafx.controls', 'javafx.graphics', 'javafx.base', 'javafx.fxml']
+}

@@ -1,0 +1,12 @@
+rootProject.name = 'Template'
+include 'ClientFx'
+include 'ClientFx:src:main:Models'
+findProject(':ClientFx:src:main:Models')?.name = 'Models'
+include 'Networking'
+include 'Services'
+include 'Persistance'
+include 'Server'
+include 'Models'
+include 'ClientFx'
+include 'Rest'
+
